@@ -1,0 +1,13 @@
+$media-query--tablet: 768px;
+$media-query--laptop: 1280px;
+
+$media-queries: (
+  laptop-up: '(min-width: #{$media-query--laptop})',
+  tablet-up: '(min-width: #{$media-query--tablet})'
+);
+
+@mixin media-query($media-query-name) {
+  @media #{map-get($media-queries, $media-query-name)} {
+    @content;
+  }
+}
