@@ -1,6 +1,6 @@
 import express from 'express';
 
-import apiProxy from './routes/apiProxy';
+import api from './routes/api';
 import renderer from './renderer';
 
 const app = express();
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV !== 'production') {
 app.use('/', express.static('static'));
 
 // api
-app.use('/api', apiProxy);
+app.use('/api', api);
 
 // render
 app.get('*', renderer());

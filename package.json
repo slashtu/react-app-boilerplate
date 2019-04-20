@@ -2,7 +2,7 @@
   "name": "react-app-boilerplate",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rm -r dist",
+    "clean": "rm -rf build static/dist static/sw.js node_modules/.cache",
     "dev": "yarn run build:dev && yarn start",
     "prod": "yarn run build:prod && yarn start",
     "build:dev": "yarn run build:client:dev && yarn run build:server:dev",
@@ -21,7 +21,6 @@
   "author": "Slash Tu <y12341234@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~4.1.1",

@@ -1,0 +1,14 @@
+.root {
+  border: 2px solid black;
+}
+
+.nav {
+  height: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  padding: 8px;
+}
